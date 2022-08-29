@@ -21,6 +21,7 @@ import { interceptorProvider } from './service/interceptor-service';
 import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
 import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
 import { NeweducacionComponent } from './components/educacion/neweducacion.component';
+import { EditeducacionComponent } from './components/educacion/editeducacion.component';
 
 
 
@@ -44,7 +45,8 @@ import { NeweducacionComponent } from './components/educacion/neweducacion.compo
     LoginComponent,
     NewExperienciaComponent,
     EditExperienciaComponent,
-    NeweducacionComponent
+    NeweducacionComponent,
+    EditeducacionComponent
   ],
   imports: [
     BrowserModule,
