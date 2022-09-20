@@ -11,11 +11,12 @@ import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 export class EditExperienciaComponent implements OnInit {
 expLab : Experiencia = null;
   constructor(private sExperiencia: SExperienciaService, private activatedRouter:ActivatedRoute,
-    private router:Router) { }
+    private router: Router) { }
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.sExperiencia.detail(id).subscribe(data =>{
+    this.sExperiencia.detail(id).subscribe(
+      data =>{
       this.expLab = data;
     },err =>{
       alert("Error al modificar experiencia");
@@ -24,7 +25,7 @@ expLab : Experiencia = null;
     )
   }
 
-  onUpdate():void{
+  onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
     this.sExperiencia.update(id, this.expLab).subscribe(
       data => {
